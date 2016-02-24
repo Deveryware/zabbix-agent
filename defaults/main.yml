@@ -7,8 +7,8 @@ zbx_agent_zbx_server_address  : "localhost"
 zbx_agent_zbx_server_port     : "10051"
 
 zbx_agent_config:
-  PidFile                     : /var/run/zabbix_agentd.pid
-  LogFile                     : /var/log/zabbix_agentd.log
+  PidFile                     : /var/run/zabbix/zabbix_agentd.pid
+  LogFile                     : /var/log/zabbix/zabbix_agentd.log
   LogFileSize                 : 5
   EnableRemoteCommands        : 0
   LogRemoteCommands           : 1
