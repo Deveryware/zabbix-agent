@@ -18,4 +18,4 @@ zbx_agent_config:
   ServerActive                : "{{ zbx_agent_zbx_server_address }}:{{ zbx_agent_zbx_server_port }}"
   RefreshActiveChecks         : 120
   Hostname                    : "{{ ansible_fqdn }}"
-  Include                     : /etc/zabbix/zabbix_agentd.conf.d/
+  Include                     : /etc/zabbix/zabbix_agentd.d/
