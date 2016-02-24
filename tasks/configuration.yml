@@ -4,7 +4,7 @@
 # ------------------------------------------------------------------------------
 - name: Generation config file
   template:
-    src: zabbix_agentd.conf.j2
+    src: zabbix_agentd.conf
     dest: /etc/zabbix/zabbix_agentd.conf
     owner: root
     group: root
