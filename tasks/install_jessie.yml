@@ -1,0 +1,16 @@
+---
+# ------------------------------------------------------------------------------
+# File: zabbix-agent/tasks/install.yml
+# ------------------------------------------------------------------------------
+
+
+- apt_key: url=http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX state=present
+
+- apt_repository: repo='deb http://repo.zabbix.com/zabbix/3.0/debian jessie main' state=present
+
+- name: Install
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - zabbix-agent
