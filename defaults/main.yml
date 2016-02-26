@@ -5,6 +5,7 @@
 
 zbx_agent_zbx_server_address  : "localhost"
 zbx_agent_zbx_server_port     : "10051"
+zbx_agent_register_type       : "default"
 
 zbx_agent_config:
   PidFile                     : /var/run/zabbix/zabbix_agentd.pid
@@ -16,6 +17,6 @@ zbx_agent_config:
   ListenPort                  : 10050
   StartAgents                 : 3
   ServerActive                : "{{ zbx_agent_zbx_server_address }}:{{ zbx_agent_zbx_server_port }}"
-  RefreshActiveChecks         : 120
+  RefreshActiveChecks         : 300
   Hostname                    : "{{ ansible_fqdn }}"
   Include                     : /etc/zabbix/zabbix_agentd.d/

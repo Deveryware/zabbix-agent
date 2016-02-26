@@ -2,12 +2,11 @@
 # ------------------------------------------------------------------------------
 # File: zabbix-agent/tasks/configuration.yml
 # ------------------------------------------------------------------------------
-- name: Generation config file
+- name: config file
   template:
     src: zabbix_agentd.conf
     dest: /etc/zabbix/zabbix_agentd.conf
-    owner: root
-    group: root
+    owner: zabbix
+    group: zabbix
     mode: 0644
-    backup: yes
   notify: restart zabbix-agent
