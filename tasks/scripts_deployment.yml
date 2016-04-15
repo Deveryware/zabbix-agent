@@ -1,7 +1,4 @@
 ---
 
 - name: scripts deployment
-  synchronize: src=scripts/ dest=/etc/zabbix/scripts.d/ delete=yes group=no owner=no perms=no recursive=yes
-
-- name: fix rights on zabbix scripts path
-  file: path=/etc/zabbix/scripts.d state=directory mode=0755 owner=zabbix group=zabbix recurse=yes
+  copy: src=scripts/ dest=/etc/zabbix/scripts.d/ mode=0755 owner=zabbix group=zabbix
