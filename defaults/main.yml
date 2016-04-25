@@ -21,4 +21,4 @@ zbx_agent_config:
   RefreshActiveChecks         : 300
   Hostname                    : "{{ ansible_fqdn }}"
   Include                     : /etc/zabbix/zabbix_agentd.d/
-  HostMetaData                : "{{ zbx_agent_hostmetadata }}"
+  HostMetadata                : "{{ zbx_agent_hostmetadata }}"
