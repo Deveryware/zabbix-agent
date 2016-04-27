@@ -18,7 +18,7 @@ zbx_agent_config:
   ListenPort                  : 10050
   StartAgents                 : 3
   ServerActive                : "{{ zbx_agent_zbx_server_address }}"
-  RefreshActiveChecks         : 300
+  RefreshActiveChecks         : 120
   Hostname                    : "{{ ansible_fqdn }}"
   Include                     : /etc/zabbix/zabbix_agentd.d/
   HostMetadata                : "{{ zbx_agent_hostmetadata }}"
