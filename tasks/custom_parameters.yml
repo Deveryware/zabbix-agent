@@ -1,0 +1,7 @@
+---
+# ------------------------------------------------------------------------------
+# File: zabbix-agent/tasks/custom_parameters.yml
+# ------------------------------------------------------------------------------
+
+- lineinfile: dest={{zbx_agent_config.Include}}/{{item.name}} line="{{item.custom_parameter}}"
+  with_items: "{{custom_parameters|default([])}}"
