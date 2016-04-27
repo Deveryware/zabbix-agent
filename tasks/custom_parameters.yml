@@ -5,5 +5,5 @@
 
 - name: custom parameters file
   template: src=user_parameters.conf dest={{zbx_agent_config.Include}}/{{item}}.conf owner=zabbix group=zabbix mode=0644
-  with_items: "{{custom_parameters|default([])}}"
+  with_items: "{{custom_userparameters|default([])}}"
   notify: restart zabbix-agent
