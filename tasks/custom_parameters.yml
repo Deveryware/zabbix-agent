@@ -3,5 +3,7 @@
 # File: zabbix-agent/tasks/custom_parameters.yml
 # ------------------------------------------------------------------------------
 
-- lineinfile: dest={{zbx_agent_config.Include}}/{{item.name}} line="{{item.custom_parameter}}"
+- name: custom parameters file
+  template: src=user_parameters.conf dest={{zbx_agent_config.Include}}/{{item}}.conf owner=zabbix group=zabbix mode=0644
   with_items: "{{custom_parameters|default([])}}"
+  notify: restart zabbix-agent
